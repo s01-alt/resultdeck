@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | ResultDeck</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">ResultDeck</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="signup.html" class="button-primary">Get Started</a>
+        </div>
+    </nav>
+
+    <section class="form-section">
+        <div class="form-card">
+            <h2>Create Your Account</h2>
+            <p style="text-align: center; color: #64748b; margin-bottom: 2rem;">
+                Start managing results in minutes
+            </p>
+            
+            <!-- Google Sign Up Button -->
+            <button id="google-signup" class="button-primary" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M19.6 10.227c0-.709-.064-1.39-.182-2.045H10v3.868h5.382a4.6 4.6 0 01-1.996 3.018v2.51h3.232c1.891-1.742 2.982-4.305 2.982-7.35z" fill="#4285F4"/>
+                    <path d="M10 20c2.7 0 4.964-.895 6.618-2.423l-3.232-2.509c-.895.6-2.04.955-3.386.955-2.605 0-4.81-1.76-5.595-4.123H1.064v2.59A9.996 9.996 0 0010 20z" fill="#34A853"/>
+                    <path d="M4.405 11.9c-.2-.6-.314-1.24-.314-1.9 0-.66.114-1.3.314-1.9V5.51H1.064A9.996 9.996 0 000 10c0 1.614.386 3.14 1.064 4.49l3.34-2.59z" fill="#FBBC05"/>
+                    <path d="M10 3.977c1.468 0 2.786.505 3.823 1.496l2.868-2.868C14.959.99 12.695 0 10 0 6.09 0 2.71 2.24 1.064 5.51l3.34 2.59C5.19 5.736 7.395 3.977 10 3.977z" fill="#EA4335"/>
+                </svg>
+                Sign up with Google
+            </button>
+
+            <div class="form-divider">
+                <span>or sign up with email</span>
+            </div>
+
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="school-name">School Name</label>
+                    <input 
+                        type="text" 
+                        id="school-name" 
+                        name="school-name" 
+                        class="form-input" 
+                        placeholder="e.g., Lincoln High School"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        class="form-input" 
+                        placeholder="admin@yourschool.com"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        class="form-input" 
+                        placeholder="At least 8 characters"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="button-primary" style="width: 100%; margin-top: 1rem;">
+                    Create Account
+                </button>
+            </form>
+
+            <p style="text-align: center; margin-top: 2rem; color: #64748b;">
+                Already have an account? 
+                <a href="login.html" style="color: #2563eb; text-decoration: none; font-weight: 600;">Log in</a>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 ResultDeck. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="contact.html">Contact</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Placeholder for Supabase integration
+        document.getElementById('google-signup').addEventListener('click', function() {
+            alert('Google sign-up will be connected to Supabase Auth');
+            // TODO: Integrate Supabase Google OAuth
+        });
+
+        document.getElementById('signup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Email sign-up will be connected to Supabase Auth');
+            // TODO: Integrate Supabase Email/Password Auth
+        });
+    </script>
+</body>
+</html>
